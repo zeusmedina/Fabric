@@ -22,7 +22,7 @@ class FabricItemCell: UITableViewCell {
     @IBOutlet weak var fabricPriceLabel: UILabel!
     
     func updateUI() {
-        fabricPhoto.image = UIImage(named:"nb-shoes.jpeg")
+        fabricPhoto.image = UIImage(named:"fashion")
         fabricNameLabel.text = "Dad Shoes"
         fabricStoreLabel.text = "Banana Republic"
         fabricPriceLabel.text = "$100"
