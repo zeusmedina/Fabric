@@ -12,6 +12,8 @@ class FabricItemCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var fabricItemImage: UIImageView!
     @IBOutlet weak var fabricItemNameLabel: UILabel!
+    @IBOutlet weak var fabricItemStoreLabel: UILabel!
+    
     
     
 }
