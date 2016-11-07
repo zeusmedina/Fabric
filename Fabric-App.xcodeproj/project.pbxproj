@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1D04051DD00AA200716A42 /* CollectionItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */; };
+		CE1D04091DD00F0C00716A42 /* FabricItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D04081DD00F0C00716A42 /* FabricItemCollectionCell.swift */; };
+		CE1D040B1DD0118000716A42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1D040A1DD0118000716A42 /* Assets.xcassets */; };
 		CEEC166C1DB5B89C00D44CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC166B1DB5B89C00D44CF0 /* AppDelegate.swift */; };
 		CEEC166E1DB5B89C00D44CF0 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */; };
 		CEEC16711DB5B89C00D44CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC166F1DB5B89C00D44CF0 /* Main.storyboard */; };
 		CEEC16741DB5B89C00D44CF0 /* Fabric_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEEC16721DB5B89C00D44CF0 /* Fabric_App.xcdatamodeld */; };
-		CEEC16761DB5B89C00D44CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC16751DB5B89C00D44CF0 /* Assets.xcassets */; };
 		CEEC16791DB5B89C00D44CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC16771DB5B89C00D44CF0 /* LaunchScreen.storyboard */; };
 		CEEC16841DB5B9E600D44CF0 /* FabricItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC16831DB5B9E600D44CF0 /* FabricItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemsViewController.swift; sourceTree = "<group>"; };
+		CE1D04081DD00F0C00716A42 /* FabricItemCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricItemCollectionCell.swift; sourceTree = "<group>"; };
+		CE1D040A1DD0118000716A42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEC16681DB5B89C00D44CF0 /* Fabric-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fabric-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEC166B1DB5B89C00D44CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		CEEC16701DB5B89C00D44CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEEC16731DB5B89C00D44CF0 /* Fabric_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fabric_App.xcdatamodel; sourceTree = "<group>"; };
-		CEEC16751DB5B89C00D44CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEC16781DB5B89C00D44CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEEC167A1DB5B89C00D44CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEEC16831DB5B9E600D44CF0 /* FabricItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricItemCell.swift; sourceTree = "<group>"; };
@@ -62,10 +66,10 @@
 				CEEC16811DB5B9AA00D44CF0 /* View */,
 				CEEC16801DB5B9A100D44CF0 /* Model */,
 				CEEC166B1DB5B89C00D44CF0 /* AppDelegate.swift */,
-				CEEC16751DB5B89C00D44CF0 /* Assets.xcassets */,
 				CEEC16771DB5B89C00D44CF0 /* LaunchScreen.storyboard */,
 				CEEC167A1DB5B89C00D44CF0 /* Info.plist */,
 				CEEC16721DB5B89C00D44CF0 /* Fabric_App.xcdatamodeld */,
+				CE1D040A1DD0118000716A42 /* Assets.xcassets */,
 			);
 			path = "Fabric-App";
 			sourceTree = "<group>";
@@ -82,6 +86,7 @@
 			children = (
 				CEEC166F1DB5B89C00D44CF0 /* Main.storyboard */,
 				CEEC16831DB5B9E600D44CF0 /* FabricItemCell.swift */,
+				CE1D04081DD00F0C00716A42 /* FabricItemCollectionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */,
+				CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -156,7 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEC16791DB5B89C00D44CF0 /* LaunchScreen.storyboard in Resources */,
-				CEEC16761DB5B89C00D44CF0 /* Assets.xcassets in Resources */,
+				CE1D040B1DD0118000716A42 /* Assets.xcassets in Resources */,
 				CEEC16711DB5B89C00D44CF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEC16741DB5B89C00D44CF0 /* Fabric_App.xcdatamodeld in Sources */,
+				CE1D04091DD00F0C00716A42 /* FabricItemCollectionCell.swift in Sources */,
 				CEEC16841DB5B9E600D44CF0 /* FabricItemCell.swift in Sources */,
 				CEEC166E1DB5B89C00D44CF0 /* ItemsViewController.swift in Sources */,
+				CE1D04051DD00AA200716A42 /* CollectionItemsViewController.swift in Sources */,
 				CEEC166C1DB5B89C00D44CF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
