@@ -154,7 +154,7 @@
                                                     <rect key="frame" x="0.0" y="171" width="355" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leather Belt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJL-Bb-VtE">
-                                                            <rect key="frame" x="8" y="34" width="66" height="17"/>
+                                                            <rect key="frame" x="8" y="34" width="200" height="17"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                                             <color key="textColor" red="0.15335716390000001" green="0.15335716390000001" blue="0.15335716390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                                                         <constraint firstItem="dJL-Bb-VtE" firstAttribute="top" secondItem="hmD-eC-h0h" secondAttribute="bottom" constant="2" id="e3b-xc-mgI"/>
                                                         <constraint firstItem="8HZ-bU-UQl" firstAttribute="leading" secondItem="hmD-eC-h0h" secondAttribute="trailing" constant="134" id="fZ2-mZ-Bjs"/>
                                                         <constraint firstAttribute="trailing" secondItem="8HZ-bU-UQl" secondAttribute="trailing" constant="8" id="jmy-BN-Ceu"/>
-                                                        <constraint firstAttribute="trailing" secondItem="dJL-Bb-VtE" secondAttribute="trailing" constant="281" id="qFb-vW-YDA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dJL-Bb-VtE" secondAttribute="trailing" constant="147" id="qFb-vW-YDA"/>
                                                         <constraint firstAttribute="bottom" secondItem="dJL-Bb-VtE" secondAttribute="bottom" constant="8" id="stK-Th-B0S"/>
                                                         <constraint firstItem="dJL-Bb-VtE" firstAttribute="leading" secondItem="Wg7-pb-Sav" secondAttribute="leading" constant="8" id="xEZ-gF-0X9"/>
                                                     </constraints>
@@ -201,6 +201,7 @@
                                         <connections>
                                             <outlet property="fabricItemImage" destination="eoG-ta-z6C" id="Uf6-1t-009"/>
                                             <outlet property="fabricItemNameLabel" destination="dJL-Bb-VtE" id="Ygh-5S-aWD"/>
+                                            <outlet property="fabricItemPriceLabel" destination="8HZ-bU-UQl" id="ML9-CU-H7A"/>
                                             <outlet property="fabricItemStoreLabel" destination="hmD-eC-h0h" id="UfL-DB-Z4a"/>
                                         </connections>
                                     </collectionViewCell>

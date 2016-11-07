@@ -31,7 +31,8 @@ class CollectionItemsViewController: UIViewController, UICollectionViewDelegate,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FabricItemCollectionCell", for: indexPath) as! FabricItemCollectionCell
         
         cell.fabricItemImage?.image = self.imageArray[indexPath.row]
-        cell.fabricItemNameLabel?.text = "FABRIC"
+        cell.fabricItemStoreLabel?.text = "Banana Republic"
+        cell.fabricItemNameLabel?.text = "Blue Chinos"
         return cell
     }
     
