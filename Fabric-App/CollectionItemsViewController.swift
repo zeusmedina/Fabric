@@ -18,6 +18,7 @@ class CollectionItemsViewController: UIViewController, UICollectionViewDelegate,
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.reloadData()
     }
 
     
