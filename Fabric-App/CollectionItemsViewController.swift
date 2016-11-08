@@ -8,13 +8,11 @@
 
 import UIKit
 
-class CollectionItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+class CollectionItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
 
     let imageArray = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named:"3")]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +33,40 @@ class CollectionItemsViewController: UIViewController, UICollectionViewDelegate,
         cell.fabricItemNameLabel?.text = "Blue Chinos"
         return cell
     }
+    
+    
+    
+    
+    
+    // UICollectionViewDelegateFlowLayout Functions that set up the cell user interface
+    
+    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let bounds = self.view.bounds
+        let SCREEN_WIDTH = bounds.size.width
+        let itemSize = CGSize(width: SCREEN_WIDTH - 20, height: (SCREEN_WIDTH - 20) * 0.65)
+        return itemSize
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat{
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 10
+    }
+    
     
     /*
     // MARK: - Navigation
