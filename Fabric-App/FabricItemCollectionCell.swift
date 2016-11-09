@@ -14,7 +14,5 @@ class FabricItemCollectionCell: UICollectionViewCell {
     @IBOutlet weak var fabricItemNameLabel: UILabel!
     @IBOutlet weak var fabricItemStoreLabel: UILabel!
     @IBOutlet weak var fabricItemPriceLabel: UILabel!
-    
-    
-    
+            
 }
