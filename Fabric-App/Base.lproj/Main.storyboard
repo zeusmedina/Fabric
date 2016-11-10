@@ -396,11 +396,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraRollButton" destination="IwF-PB-K7Y" id="XSK-db-j6y"/>
                         <outlet property="itemPhotoView" destination="RxS-1L-UBa" id="5eE-7f-BXj"/>
                         <outlet property="itemPriceField" destination="cuI-UZ-vBT" id="353-El-lQc"/>
                         <outlet property="itemTypeField" destination="BtX-sv-KbD" id="Bxu-Tf-Paa"/>
                         <outlet property="saveItem" destination="Pnk-bv-Riv" id="NqG-DB-sg0"/>
                         <outlet property="storeNameField" destination="9ua-Y2-EKD" id="Bm2-gC-hjL"/>
+                        <outlet property="takePhotoButton" destination="cdq-k1-g5s" id="7oH-mt-KDV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnF-ef-DOo" userLabel="First Responder" sceneMemberID="firstResponder"/>

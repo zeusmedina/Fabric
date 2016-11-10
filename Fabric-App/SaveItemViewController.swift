@@ -15,11 +15,25 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var itemTypeField: AkiraTextField!
     @IBOutlet weak var itemPriceField: AkiraTextField!
     @IBOutlet weak var saveItem: UIButton!
+    @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet weak var cameraRollButton: UIButton!
     
-     let imagePickerController = UIImagePickerController()
+    let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        
+        //Due to running in the simulator, the camera function is not available
+        if (UIImagePickerController.isSourceTypeAvailable(.camera) == false) {
+            takePhotoButton.isEnabled = false
+        }
+        //Ensures photo library is accessible, will remove upload functionality otherwise
+        if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == false) {
+            cameraRollButton.isEnabled = false
+        }
 
     }
     
