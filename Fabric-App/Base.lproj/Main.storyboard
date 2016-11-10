@@ -269,7 +269,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="RxS-1L-UBa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="RxS-1L-UBa">
                                 <rect key="frame" x="0.0" y="20" width="375" height="223"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-PB-K7Y">
@@ -469,7 +469,4 @@
             <point key="canvasLocation" x="351" y="1182"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="1" width="7360" height="4912"/>
-    </resources>
 </document>

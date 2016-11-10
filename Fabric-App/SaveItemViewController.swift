@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var itemPhotoView: UIImageView!
     @IBOutlet weak var storeNameField: AkiraTextField!
@@ -22,6 +22,13 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SaveItemViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+            
+        storeNameField.delegate = self
+        itemTypeField.delegate = self
+        itemPriceField.delegate = self
         
         imagePickerController.delegate = self
         imagePickerController.allowsEditing = true
@@ -37,18 +44,23 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
 
     }
     
+    func showImagePickerController() {
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
     
     @IBAction func onCameraRollButton(_ sender: Any) {
-        
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        showImagePickerController()
     }
     
     @IBAction func onTakePhotoButton(_ sender: Any) {
-        
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.camera
+        showImagePickerController()
     }
     
     @IBAction func onSaveItemButton(_ sender: Any) {
         // Save fabric item data to Core Data
-        
+        saveToCoreData()
         // Return to collection view
     }
     
@@ -56,5 +68,27 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
         // Dismiss modal controller
     }
     
+    
+    func saveToCoreData() {
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        // Set preview of image
+        itemPhotoView.image = chosenImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
 }
