@@ -21,6 +21,7 @@
 		CE8BCB331DD2A62900ABEAA7 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB281DD2A62900ABEAA7 /* TextFieldsEffects.swift */; };
 		CE8BCB341DD2A62900ABEAA7 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB291DD2A62900ABEAA7 /* YokoTextField.swift */; };
 		CE8BCB351DD2A62900ABEAA7 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB2A1DD2A62900ABEAA7 /* YoshikoTextField.swift */; };
+		CE8BCB371DD50D4300ABEAA7 /* SaveItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB361DD50D4300ABEAA7 /* SaveItemViewController.swift */; };
 		CEEC166C1DB5B89C00D44CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC166B1DB5B89C00D44CF0 /* AppDelegate.swift */; };
 		CEEC166E1DB5B89C00D44CF0 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */; };
 		CEEC16711DB5B89C00D44CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC166F1DB5B89C00D44CF0 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		CE8BCB281DD2A62900ABEAA7 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
 		CE8BCB291DD2A62900ABEAA7 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
 		CE8BCB2A1DD2A62900ABEAA7 /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		CE8BCB361DD50D4300ABEAA7 /* SaveItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveItemViewController.swift; sourceTree = "<group>"; };
 		CEEC16681DB5B89C00D44CF0 /* Fabric-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fabric-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEC166B1DB5B89C00D44CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */,
 				CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */,
+				CE8BCB361DD50D4300ABEAA7 /* SaveItemViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				CE8BCB2C1DD2A62900ABEAA7 /* HoshiTextField.swift in Sources */,
 				CE8BCB321DD2A62900ABEAA7 /* MinoruTextField.swift in Sources */,
 				CE8BCB311DD2A62900ABEAA7 /* MadokaTextField.swift in Sources */,
+				CE8BCB371DD50D4300ABEAA7 /* SaveItemViewController.swift in Sources */,
 				CEEC16841DB5B9E600D44CF0 /* FabricItemCell.swift in Sources */,
 				CEEC166E1DB5B89C00D44CF0 /* ItemsViewController.swift in Sources */,
 				CE8BCB331DD2A62900ABEAA7 /* TextFieldsEffects.swift in Sources */,

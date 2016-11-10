@@ -223,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="1256.8" y="1181.5592203898052"/>
         </scene>
-        <!--View Controller-->
+        <!--Save Item View Controller-->
         <scene sceneID="tZg-2O-1Yp">
             <objects>
-                <viewController id="2Ac-Pz-cds" sceneMemberID="viewController">
+                <viewController id="2Ac-Pz-cds" customClass="SaveItemViewController" customModule="Fabric_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RZ6-Om-hxo"/>
                         <viewControllerLayoutGuide type="bottom" id="XQy-Io-xRw"/>
@@ -242,7 +242,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,6 +283,9 @@
                                 <state key="normal" title="Camera Roll">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onCameraRollButton:" destination="2Ac-Pz-cds" eventType="touchUpInside" id="w2Y-qh-bRf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdq-k1-g5s">
                                 <rect key="frame" x="217" y="290" width="120" height="32"/>
@@ -294,6 +297,9 @@
                                 <state key="normal" title="Take Photo">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTakePhotoButton:" destination="2Ac-Pz-cds" eventType="touchUpInside" id="gJB-Yf-09K"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload A Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-cx-w0l">
                                 <rect key="frame" x="98" y="251" width="178" height="20"/>
@@ -311,6 +317,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onCancelButton:" destination="2Ac-Pz-cds" eventType="touchUpInside" id="4ci-wX-d4A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnk-bv-Riv">
                                 <rect key="frame" x="217" y="536" width="120" height="32"/>
@@ -322,6 +331,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSaveItemButton:" destination="2Ac-Pz-cds" eventType="touchUpInside" id="hjz-26-4zs"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Price" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cuI-UZ-vBT" customClass="AkiraTextField" customModule="Fabric_App">
                                 <rect key="frame" x="49" y="457" width="242" height="54"/>
@@ -383,6 +395,13 @@
                             <constraint firstItem="BtX-sv-KbD" firstAttribute="leading" secondItem="fYc-6k-3eN" secondAttribute="leading" constant="49" id="yv9-wh-UQ6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemPhotoView" destination="RxS-1L-UBa" id="5eE-7f-BXj"/>
+                        <outlet property="itemPriceField" destination="cuI-UZ-vBT" id="353-El-lQc"/>
+                        <outlet property="itemTypeField" destination="BtX-sv-KbD" id="Bxu-Tf-Paa"/>
+                        <outlet property="saveItem" destination="Pnk-bv-Riv" id="NqG-DB-sg0"/>
+                        <outlet property="storeNameField" destination="9ua-Y2-EKD" id="Bm2-gC-hjL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnF-ef-DOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
