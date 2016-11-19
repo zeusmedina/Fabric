@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CollectionItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -14,29 +15,52 @@ class CollectionItemsViewController: UIViewController, UICollectionViewDelegate,
 
     let imageArray = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named:"3")]
     
+    let fabricDataContext: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+    var fabricList = [FabricEntity]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        collectionView.reloadData()
+    }
+    
+    func fetchFabricItems() -> Int {
+        let fetchRequest: NSFetchRequest<FabricEntity> = FabricEntity.fetchRequest()
+        var size = 0
+        do {
+            fabricList = try fabricDataContext.fetch(fetchRequest)
+            size = fabricList.count
+            
+        } catch {
+            print("Error in fetching core data within CollectionViewController")
+        }
+        fabricList.reverse()
+        return size
+        
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count
+        return fetchFabricItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FabricItemCollectionCell", for: indexPath) as! FabricItemCollectionCell
         
-        cell.fabricItemImage?.image = self.imageArray[indexPath.row]
-        cell.fabricItemStoreLabel?.text = "Banana Republic"
-        cell.fabricItemNameLabel?.text = "Blue Chinos"
+        let photo = UIImage(data: fabricList[indexPath.row].itemPhoto as! Data)
+        
+        cell.fabricItemImage?.image = photo
+        cell.fabricItemStoreLabel?.text = fabricList[indexPath.row].storeName
+        cell.fabricItemNameLabel?.text = fabricList[indexPath.row].itemName
+        cell.fabricItemPriceLabel?.text = fabricList[indexPath.row].itemPrice
         return cell
     }
-    
-    
-    
     
     
     // UICollectionViewDelegateFlowLayout Functions that set up the cell user interface

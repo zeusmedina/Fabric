@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
@@ -59,18 +60,31 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func onSaveItemButton(_ sender: Any) {
-        // Save fabric item data to Core Data
         saveToCoreData()
-        // Return to collection view
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onCancelButton(_ sender: Any) {
         // Dismiss modal controller
+        self.dismiss(animated: true, completion: nil)
     }
     
     
     func saveToCoreData() {
+        let dataContext: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        let ent = NSEntityDescription.entity(forEntityName: "FabricEntity", in: dataContext)
+        let newItem = FabricEntity(entity: ent!, insertInto: dataContext)
+        let imageData = UIImagePNGRepresentation(itemPhotoView.image!)
+        newItem.itemPhoto = imageData as NSData?
+        newItem.itemName = itemTypeField.text!
+        newItem.itemPrice = itemPriceField.text!
+        newItem.storeName = storeNameField.text!
         
+        do {
+            try dataContext.save()
+        } catch _ {
+            print("Error in saving context")
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
