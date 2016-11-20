@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0EFAC61DE12E3C003610FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EFAC51DE12E3C003610FC /* DetailViewController.swift */; };
 		CE1D04051DD00AA200716A42 /* CollectionItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */; };
 		CE1D04091DD00F0C00716A42 /* FabricItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D04081DD00F0C00716A42 /* FabricItemCollectionCell.swift */; };
 		CE1D040B1DD0118000716A42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1D040A1DD0118000716A42 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0EFAC51DE12E3C003610FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemsViewController.swift; sourceTree = "<group>"; };
 		CE1D04081DD00F0C00716A42 /* FabricItemCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricItemCollectionCell.swift; sourceTree = "<group>"; };
 		CE1D040A1DD0118000716A42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				CEEC166D1DB5B89C00D44CF0 /* ItemsViewController.swift */,
 				CE1D04041DD00AA200716A42 /* CollectionItemsViewController.swift */,
 				CE8BCB361DD50D4300ABEAA7 /* SaveItemViewController.swift */,
+				CE0EFAC51DE12E3C003610FC /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8BCB351DD2A62900ABEAA7 /* YoshikoTextField.swift in Sources */,
+				CE0EFAC61DE12E3C003610FC /* DetailViewController.swift in Sources */,
 				CEEC16741DB5B89C00D44CF0 /* Fabric_App.xcdatamodeld in Sources */,
 				CE8BCB2F1DD2A62900ABEAA7 /* JiroTextField.swift in Sources */,
 				CE8BCB301DD2A62900ABEAA7 /* KaedeTextField.swift in Sources */,

@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import MapKit
 
-class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var itemPhotoView: UIImageView!
     @IBOutlet weak var storeNameField: AkiraTextField!
@@ -20,6 +21,9 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var cameraRollButton: UIButton!
     
     let imagePickerController = UIImagePickerController()
+    let locationManager = CLLocationManager()
+    var latitute: Double = 0.0
+    var longitude: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +46,27 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
         if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == false) {
             cameraRollButton.isEnabled = false
         }
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+//          locationManager.requestWhenInUseAuthorization()
+        }
 
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        self.longitude = Double(locValue.longitude)
+        self.latitute = Double(locValue.latitude)
     }
     
     func showImagePickerController() {
@@ -79,6 +103,8 @@ class SaveItemViewController: UIViewController, UIImagePickerControllerDelegate,
         newItem.itemName = itemTypeField.text!
         newItem.itemPrice = itemPriceField.text!
         newItem.storeName = storeNameField.text!
+        newItem.lat = latitute
+        newItem.long = longitude
         
         do {
             try dataContext.save()
