@@ -51,12 +51,12 @@ class DetailViewController: UIViewController {
         
         self.mapView.setRegion(region, animated: true)
         
-//        // add an annotation
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = coordinates
-//        annotation.title = name
-//        annotation.subtitle = cityName
-//        self.mapView.addAnnotation(annotation)
+        // add an annotation
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        annotation.title = fabricObject.storeName
+        annotation.subtitle = fabricObject.itemName
+        self.mapView.addAnnotation(annotation)
 //        self.mapView.mapType = MKMapType.Standard
     }
 
