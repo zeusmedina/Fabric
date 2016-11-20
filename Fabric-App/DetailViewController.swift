@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 import CoreLocation
 
 class DetailViewController: UIViewController {
@@ -21,6 +22,7 @@ class DetailViewController: UIViewController {
     
     var fabricObject : FabricEntity!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -61,8 +63,15 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func onDeleteButton(_ sender: Any) {
+        let fabricDataContext: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        fabricDataContext.delete(fabricObject)
         
-        
+        do {
+            try fabricDataContext.save()
+        } catch _ {
+            print("Error in deleting the object")
+        }
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     /*
