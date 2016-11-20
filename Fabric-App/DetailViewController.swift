@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
         itemImageView.image = photo
         storeNameLabel?.text = fabricObject.storeName
         itemNameLabel?.text = fabricObject.itemName
-        priceLabel?.text = fabricObject.itemPrice
+        priceLabel?.text = "$\(fabricObject.itemPrice!)"
     }
     
     func loadMap() {

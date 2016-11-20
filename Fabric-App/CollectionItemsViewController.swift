@@ -58,7 +58,7 @@ class CollectionItemsViewController: UIViewController, UICollectionViewDelegate,
         cell.fabricItemImage?.image = photo
         cell.fabricItemStoreLabel?.text = fabricList[indexPath.row].storeName
         cell.fabricItemNameLabel?.text = fabricList[indexPath.row].itemName
-        cell.fabricItemPriceLabel?.text = fabricList[indexPath.row].itemPrice
+        cell.fabricItemPriceLabel?.text = "$\(fabricList[indexPath.row].itemPrice!)"
         return cell
     }
     
